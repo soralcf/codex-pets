@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "spriteVersionNumber": 2,
+  "spritesheet": "../spritesheet.webp",
+  "validation": "validation.json",
+  "chroma_despill": "chroma-despill.json",
+  "contact_sheet": "../previews/contact-sheet.png",
+  "direction_sheet": "../previews/look-directions.png",
+  "blind_direction_validation": "direction-blind-validation.json",
+  "install_target": "~/.codex/pets/tsumugi-wenders",
+  "pet_json_sha256": "afca8b1cb4ccefef0c126c4afecf15fcba25269f504be811a439627ddccd8a0b",
+  "spritesheet_sha256": "15dd47473fab038ba6872ce6c47f85a1e342f8e3f46733337282b01a453c55aa",
+  "final_visual_qa": "pass"
+}
