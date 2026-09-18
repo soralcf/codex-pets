@@ -1,14 +1,29 @@
 {
   "ok": true,
   "spriteVersionNumber": 2,
+  "revision": "2026-09-18",
   "spritesheet": "../spritesheet.webp",
   "validation": "validation.json",
   "chroma_despill": "chroma-despill.json",
   "contact_sheet": "../previews/contact-sheet.png",
   "direction_sheet": "../previews/look-directions.png",
   "blind_direction_validation": "direction-blind-validation.json",
+  "blind_direction_scope": "historical unchanged look geometry; no new gaze art generated",
   "install_target": "~/.codex/pets/tsumugi-wenders",
   "pet_json_sha256": "afca8b1cb4ccefef0c126c4afecf15fcba25269f504be811a439627ddccd8a0b",
-  "spritesheet_sha256": "15dd47473fab038ba6872ce6c47f85a1e342f8e3f46733337282b01a453c55aa",
-  "final_visual_qa": "pass"
+  "spritesheet_sha256": "3aedeccdab8ebd766f743b822fa976d4a0c5b30e300251a9c7493898c3555d13",
+  "final_visual_qa": "pass_with_documented_motion_warnings",
+  "visual_qa_report": "final-visual-qa.json",
+  "repaired_states": [
+    "idle",
+    "running-right",
+    "running-left",
+    "jumping",
+    "failed",
+    "review"
+  ],
+  "before_atlas": "../previews/before-2026-09-18.webp",
+  "before_sha256": "15dd47473fab038ba6872ce6c47f85a1e342f8e3f46733337282b01a453c55aa",
+  "look_geometry_and_alpha_preserved": true,
+  "tool": "OpenAI built-in image_gen + deterministic Pillow/numpy processing"
 }

@@ -1,0 +1,8 @@
+{
+  "ok": true,
+  "source": "../sources/2026-09-18/decoded",
+  "baseline": "../previews/before-2026-09-18.webp",
+  "output_sha256": "3aedeccdab8ebd766f743b822fa976d4a0c5b30e300251a9c7493898c3555d13",
+  "packaged_sha256": "3aedeccdab8ebd766f743b822fa976d4a0c5b30e300251a9c7493898c3555d13",
+  "byte_identical": true
+}

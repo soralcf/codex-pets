@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<title>Tsumugi 动作检查</title>
+<style>
+body{font:15px system-ui;background:#17191f;color:#eee;max-width:1100px;margin:32px auto;padding:0 20px}button,select,input{font:inherit;margin:6px;padding:6px}header{position:sticky;top:0;background:#17191fee;padding:12px 0}section{display:flex;gap:24px;flex-wrap:wrap}.card{padding:16px;border:1px solid #484a54;border-radius:12px}.sprite{width:192px;height:208px;background-size:1536px 2288px;background-repeat:no-repeat}.stage{background:#272b35;border-radius:8px;position:relative}.stage:after{content:'';position:absolute;left:0;right:0;bottom:5px;border-top:1px dashed #76809955;pointer-events:none}small{display:block;margin:12px 0;color:#b6bfd1}.light .stage{background:#eee}.green .stage{background:#356454}.checker .stage{background:conic-gradient(#bbb 25%,#eee 0 50%,#bbb 0 75%,#eee 0) 0 0/20px 20px}
+</style>
+<h1>Tsumugi 动作检查</h1>
+<p>与本机播放器保持一致：动作播放三遍后进入慢速待机。也可单帧查看和连续循环，检查位置、比例与发丝边缘。</p>
+<header>
+<select id="state"></select>
+<select id="mode"><option value="app">应用节奏：三遍后待机</option><option value="loop">动作循环</option></select>
+<select id="bg"><option value="dark">深色背景</option><option value="light">浅色背景</option><option value="green">绿色背景</option><option value="checker">透明棋盘</option></select>
+<button id="play">暂停</button><button id="restart">重新播放</button><button id="prev">上一帧</button><button id="next">下一帧</button>
+<label>速度 <select id="speed"><option value="1">1×</option><option value="0.5">0.5×</option><option value="0.25">0.25×</option></select></label>
+</header>
+<section id="cards"></section>
+<script>
+const states=['idle','running-right','running-left','waving','jumping','failed','waiting','running','review'];
+const labels=['待机','向右跑','向左跑','挥手','跳跃','失败','等待','工作 / 思考','审阅'];
+const durations=[[280,110,110,140,140,320],[120,120,120,120,120,120,120,220],[120,120,120,120,120,120,120,220],[140,140,140,280],[140,140,140,140,280],[140,140,140,140,140,140,140,240],[150,150,150,150,150,260],[120,120,120,120,120,220],[150,150,150,150,150,280]];
+const $=id=>document.getElementById(id);
+states.forEach((s,i)=>$('state').add(new Option(labels[i],i)));$('state').value='4';
+const sources=[['原版','before-2026-09-18.webp'],['修复版','../spritesheet.webp']];
+let sprites=[],captions=[];
+sources.forEach(([label,url])=>{let card=document.createElement('div');card.className='card';let h=document.createElement('h2');h.textContent=label;let stage=document.createElement('div');stage.className='stage';let sprite=document.createElement('div');sprite.className='sprite';sprite.style.backgroundImage=`url(${url})`;let caption=document.createElement('small');stage.append(sprite);card.append(h,stage,caption);$('cards').append(card);sprites.push(sprite);captions.push(caption);let im=new Image();im.onerror=()=>{caption.textContent='尚未生成';sprite.dataset.missing='true'};im.src=url;});
+let row=4,frame=0,cycle=0,playing=true,timer;
+function draw(){sprites.forEach((s,i)=>{if(s.dataset.missing)return;s.style.backgroundPosition=`${-frame*192}px ${-row*208}px`;captions[i].textContent=`${labels[row]} · 第 ${frame+1}/${durations[row].length} 帧 · ${row===0?'待机':`第 ${cycle+1} 遍`}`});}
+function schedule(){clearTimeout(timer);draw();if(playing)timer=setTimeout(()=>{frame++;if(frame>=durations[row].length){frame=0;cycle++;if($('mode').value==='app'&&row!==0&&cycle===3){row=0;cycle=0;}}schedule();},durations[row][frame]*(row===0?6:1)/Number($('speed').value));}
+function restart(){row=Number($('state').value);frame=cycle=0;schedule();}
+$('play').onclick=()=>{playing=!playing;$('play').textContent=playing?'暂停':'播放';schedule();};
+function step(delta){playing=false;$('play').textContent='播放';row=Number($('state').value);frame=(frame+delta+durations[row].length)%durations[row].length;schedule();}
+$('prev').onclick=()=>step(-1);$('next').onclick=()=>step(1);$('restart').onclick=restart;$('state').onchange=restart;$('mode').onchange=restart;$('speed').onchange=schedule;$('bg').onchange=()=>document.body.className=$('bg').value;restart();
+</script>
+</html>

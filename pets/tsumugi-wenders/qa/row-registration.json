@@ -1,0 +1,1096 @@
+{
+  "method": "complete-pose-components/shared-row-scale",
+  "chroma_key": "#FF00FF",
+  "rows": {
+    "idle": {
+      "source": "../sources/2026-09-18/decoded/idle.png",
+      "pose_bounds": [
+        [
+          13,
+          113,
+          343,
+          646
+        ],
+        [
+          376,
+          113,
+          705,
+          646
+        ],
+        [
+          737,
+          113,
+          1067,
+          646
+        ],
+        [
+          1099,
+          113,
+          1428,
+          646
+        ],
+        [
+          1461,
+          113,
+          1791,
+          646
+        ],
+        [
+          1823,
+          113,
+          2152,
+          646
+        ]
+      ],
+      "scale": 0.36397748592870544,
+      "frames": [
+        {
+          "column": 0,
+          "left": 36,
+          "top": 7,
+          "size": [
+            120,
+            194
+          ],
+          "despill": {
+            "algorithm": "edge-local-chroma-spill-suppression",
+            "strength": 1,
+            "edge_radius": 5,
+            "spill_tolerance": 0.15,
+            "minimum_saturation": 0.1,
+            "changed_pixels": 2289,
+            "decontaminated_pixels": 2222,
+            "spill_suppressed_pixels": 2289,
+            "rejected_pixels": 0,
+            "changed_by_cell": {
+              "r0c0": 2289
+            },
+            "alpha_preserved": true
+          }
+        },
+        {
+          "column": 1,
+          "left": 36,
+          "top": 7,
+          "size": [
+            120,
+            194
+          ],
+          "despill": {
+            "algorithm": "edge-local-chroma-spill-suppression",
+            "strength": 1,
+            "edge_radius": 5,
+            "spill_tolerance": 0.15,
+            "minimum_saturation": 0.1,
+            "changed_pixels": 2319,
+            "decontaminated_pixels": 2251,
+            "spill_suppressed_pixels": 2319,
+            "rejected_pixels": 0,
+            "changed_by_cell": {
+              "r0c0": 2319
+            },
+            "alpha_preserved": true
+          }
+        },
+        {
+          "column": 2,
+          "left": 36,
+          "top": 7,
+          "size": [
+            120,
+            194
+          ],
+          "despill": {
+            "algorithm": "edge-local-chroma-spill-suppression",
+            "strength": 1,
+            "edge_radius": 5,
+            "spill_tolerance": 0.15,
+            "minimum_saturation": 0.1,
+            "changed_pixels": 2191,
+            "decontaminated_pixels": 2147,
+            "spill_suppressed_pixels": 2191,
+            "rejected_pixels": 0,
+            "changed_by_cell": {
+              "r0c0": 2191
+            },
+            "alpha_preserved": true
+          }
+        },
+        {
+          "column": 3,
+          "left": 36,
+          "top": 7,
+          "size": [
+            120,
+            194
+          ],
+          "despill": {
+            "algorithm": "edge-local-chroma-spill-suppression",
+            "strength": 1,
+            "edge_radius": 5,
+            "spill_tolerance": 0.15,
+            "minimum_saturation": 0.1,
+            "changed_pixels": 2303,
+            "decontaminated_pixels": 2242,
+            "spill_suppressed_pixels": 2303,
+            "rejected_pixels": 0,
+            "changed_by_cell": {
+              "r0c0": 2303
+            },
+            "alpha_preserved": true
+          }
+        },
+        {
+          "column": 4,
+          "left": 36,
+          "top": 7,
+          "size": [
+            120,
+            194
+          ],
+          "despill": {
+            "algorithm": "edge-local-chroma-spill-suppression",
+            "strength": 1,
+            "edge_radius": 5,
+            "spill_tolerance": 0.15,
+            "minimum_saturation": 0.1,
+            "changed_pixels": 2263,
+            "decontaminated_pixels": 2205,
+            "spill_suppressed_pixels": 2263,
+            "rejected_pixels": 0,
+            "changed_by_cell": {
+              "r0c0": 2263
+            },
+            "alpha_preserved": true
+          }
+        },
+        {
+          "column": 5,
+          "left": 36,
+          "top": 7,
+          "size": [
+            120,
+            194
+          ],
+          "despill": {
+            "algorithm": "edge-local-chroma-spill-suppression",
+            "strength": 1,
+            "edge_radius": 5,
+            "spill_tolerance": 0.15,
+            "minimum_saturation": 0.1,
+            "changed_pixels": 2343,
+            "decontaminated_pixels": 2276,
+            "spill_suppressed_pixels": 2343,
+            "rejected_pixels": 0,
+            "changed_by_cell": {
+              "r0c0": 2343
+            },
+            "alpha_preserved": true
+          }
+        }
+      ]
+    },
+    "running-right": {
+      "source": "../sources/2026-09-18/decoded/running-right.png",
+      "pose_bounds": [
+        [
+          22,
+          211,
+          262,
+          578
+        ],
+        [
+          289,
+          211,
+          508,
+          587
+        ],
+        [
+          561,
+          211,
+          820,
+          577
+        ],
+        [
+          834,
+          211,
+          1046,
+          587
+        ],
+        [
+          1103,
+          210,
+          1316,
+          586
+        ],
+        [
+          1372,
+          211,
+          1584,
+          587
+        ],
+        [
+          1644,
+          210,
+          1911,
+          577
+        ],
+        [
+          1915,
+          210,
+          2129,
+          587
+        ]
+      ],
+      "scale": 0.5092838196286472,
+      "frames": [
+        {
+          "column": 0,
+          "left": 34,
+          "top": 9,
+          "size": [
+            122,
+            187
+          ],
+          "despill": {
+            "algorithm": "edge-local-chroma-spill-suppression",
+            "strength": 1,
+            "edge_radius": 5,
+            "spill_tolerance": 0.15,
+            "minimum_saturation": 0.1,
+            "changed_pixels": 2177,
+            "decontaminated_pixels": 2081,
+            "spill_suppressed_pixels": 2177,
+            "rejected_pixels": 0,
+            "changed_by_cell": {
+              "r0c0": 2177
+            },
+            "alpha_preserved": true
+          }
+        },
+        {
+          "column": 1,
+          "left": 33,
+          "top": 8,
+          "size": [
+            112,
+            191
+          ],
+          "despill": {
+            "algorithm": "edge-local-chroma-spill-suppression",
+            "strength": 1,
+            "edge_radius": 5,
+            "spill_tolerance": 0.15,
+            "minimum_saturation": 0.1,
+            "changed_pixels": 2087,
+            "decontaminated_pixels": 1999,
+            "spill_suppressed_pixels": 2087,
+            "rejected_pixels": 0,
+            "changed_by_cell": {
+              "r0c0": 2087
+            },
+            "alpha_preserved": true
+          }
+        },
+        {
+          "column": 2,
+          "left": 34,
+          "top": 9,
+          "size": [
+            132,
+            186
+          ],
+          "despill": {
+            "algorithm": "edge-local-chroma-spill-suppression",
+            "strength": 1,
+            "edge_radius": 5,
+            "spill_tolerance": 0.15,
+            "minimum_saturation": 0.1,
+            "changed_pixels": 2322,
+            "decontaminated_pixels": 2216,
+            "spill_suppressed_pixels": 2322,
+            "rejected_pixels": 0,
+            "changed_by_cell": {
+              "r0c0": 2322
+            },
+            "alpha_preserved": true
+          }
+        },
+        {
+          "column": 3,
+          "left": 33,
+          "top": 10,
+          "size": [
+            108,
+            191
+          ],
+          "despill": {
+            "algorithm": "edge-local-chroma-spill-suppression",
+            "strength": 1,
+            "edge_radius": 5,
+            "spill_tolerance": 0.15,
+            "minimum_saturation": 0.1,
+            "changed_pixels": 2057,
+            "decontaminated_pixels": 1987,
+            "spill_suppressed_pixels": 2057,
+            "rejected_pixels": 0,
+            "changed_by_cell": {
+              "r0c0": 2057
+            },
+            "alpha_preserved": true
+          }
+        },
+        {
+          "column": 4,
+          "left": 33,
+          "top": 9,
+          "size": [
+            108,
+            191
+          ],
+          "despill": {
+            "algorithm": "edge-local-chroma-spill-suppression",
+            "strength": 1,
+            "edge_radius": 5,
+            "spill_tolerance": 0.15,
+            "minimum_saturation": 0.1,
+            "changed_pixels": 2010,
+            "decontaminated_pixels": 1926,
+            "spill_suppressed_pixels": 2010,
+            "rejected_pixels": 0,
+            "changed_by_cell": {
+              "r0c0": 2010
+            },
+            "alpha_preserved": true
+          }
+        },
+        {
+          "column": 5,
+          "left": 33,
+          "top": 8,
+          "size": [
+            108,
+            191
+          ],
+          "despill": {
+            "algorithm": "edge-local-chroma-spill-suppression",
+            "strength": 1,
+            "edge_radius": 5,
+            "spill_tolerance": 0.15,
+            "minimum_saturation": 0.1,
+            "changed_pixels": 2213,
+            "decontaminated_pixels": 2127,
+            "spill_suppressed_pixels": 2213,
+            "rejected_pixels": 0,
+            "changed_by_cell": {
+              "r0c0": 2213
+            },
+            "alpha_preserved": true
+          }
+        },
+        {
+          "column": 6,
+          "left": 32,
+          "top": 9,
+          "size": [
+            136,
+            187
+          ],
+          "despill": {
+            "algorithm": "edge-local-chroma-spill-suppression",
+            "strength": 1,
+            "edge_radius": 5,
+            "spill_tolerance": 0.15,
+            "minimum_saturation": 0.1,
+            "changed_pixels": 2369,
+            "decontaminated_pixels": 2260,
+            "spill_suppressed_pixels": 2369,
+            "rejected_pixels": 0,
+            "changed_by_cell": {
+              "r0c0": 2369
+            },
+            "alpha_preserved": true
+          }
+        },
+        {
+          "column": 7,
+          "left": 33,
+          "top": 10,
+          "size": [
+            109,
+            192
+          ],
+          "despill": {
+            "algorithm": "edge-local-chroma-spill-suppression",
+            "strength": 1,
+            "edge_radius": 5,
+            "spill_tolerance": 0.15,
+            "minimum_saturation": 0.1,
+            "changed_pixels": 2099,
+            "decontaminated_pixels": 2003,
+            "spill_suppressed_pixels": 2099,
+            "rejected_pixels": 0,
+            "changed_by_cell": {
+              "r0c0": 2099
+            },
+            "alpha_preserved": true
+          }
+        }
+      ]
+    },
+    "running-left": {
+      "source": "../sources/2026-09-18/decoded/running-left.png",
+      "pose_bounds": [
+        [
+          29,
+          179,
+          264,
+          579
+        ],
+        [
+          302,
+          179,
+          538,
+          578
+        ],
+        [
+          567,
+          179,
+          807,
+          578
+        ],
+        [
+          842,
+          179,
+          1076,
+          579
+        ],
+        [
+          1099,
+          179,
+          1348,
+          579
+        ],
+        [
+          1379,
+          179,
+          1620,
+          578
+        ],
+        [
+          1655,
+          179,
+          1888,
+          578
+        ],
+        [
+          1925,
+          179,
+          2162,
+          579
+        ]
+      ],
+      "scale": 0.48,
+      "frames": [
+        {
+          "column": 0,
+          "left": 44,
+          "top": 9,
+          "size": [
+            113,
+            192
+          ],
+          "despill": {
+            "algorithm": "edge-local-chroma-spill-suppression",
+            "strength": 1,
+            "edge_radius": 5,
+            "spill_tolerance": 0.15,
+            "minimum_saturation": 0.1,
+            "changed_pixels": 2024,
+            "decontaminated_pixels": 1959,
+            "spill_suppressed_pixels": 2024,
+            "rejected_pixels": 0,
+            "changed_by_cell": {
+              "r0c0": 2024
+            },
+            "alpha_preserved": true
+          }
+        },
+        {
+          "column": 1,
+          "left": 45,
+          "top": 8,
+          "size": [
+            113,
+            192
+          ],
+          "despill": {
+            "algorithm": "edge-local-chroma-spill-suppression",
+            "strength": 1,
+            "edge_radius": 5,
+            "spill_tolerance": 0.15,
+            "minimum_saturation": 0.1,
+            "changed_pixels": 2209,
+            "decontaminated_pixels": 2142,
+            "spill_suppressed_pixels": 2209,
+            "rejected_pixels": 0,
+            "changed_by_cell": {
+              "r0c0": 2209
+            },
+            "alpha_preserved": true
+          }
+        },
+        {
+          "column": 2,
+          "left": 42,
+          "top": 9,
+          "size": [
+            115,
+            192
+          ],
+          "despill": {
+            "algorithm": "edge-local-chroma-spill-suppression",
+            "strength": 1,
+            "edge_radius": 5,
+            "spill_tolerance": 0.15,
+            "minimum_saturation": 0.1,
+            "changed_pixels": 2191,
+            "decontaminated_pixels": 2112,
+            "spill_suppressed_pixels": 2191,
+            "rejected_pixels": 0,
+            "changed_by_cell": {
+              "r0c0": 2191
+            },
+            "alpha_preserved": true
+          }
+        },
+        {
+          "column": 3,
+          "left": 45,
+          "top": 10,
+          "size": [
+            112,
+            192
+          ],
+          "despill": {
+            "algorithm": "edge-local-chroma-spill-suppression",
+            "strength": 1,
+            "edge_radius": 5,
+            "spill_tolerance": 0.15,
+            "minimum_saturation": 0.1,
+            "changed_pixels": 2049,
+            "decontaminated_pixels": 1994,
+            "spill_suppressed_pixels": 2049,
+            "rejected_pixels": 0,
+            "changed_by_cell": {
+              "r0c0": 2049
+            },
+            "alpha_preserved": true
+          }
+        },
+        {
+          "column": 4,
+          "left": 38,
+          "top": 9,
+          "size": [
+            120,
+            192
+          ],
+          "despill": {
+            "algorithm": "edge-local-chroma-spill-suppression",
+            "strength": 1,
+            "edge_radius": 5,
+            "spill_tolerance": 0.15,
+            "minimum_saturation": 0.1,
+            "changed_pixels": 2235,
+            "decontaminated_pixels": 2161,
+            "spill_suppressed_pixels": 2235,
+            "rejected_pixels": 0,
+            "changed_by_cell": {
+              "r0c0": 2235
+            },
+            "alpha_preserved": true
+          }
+        },
+        {
+          "column": 5,
+          "left": 43,
+          "top": 8,
+          "size": [
+            116,
+            192
+          ],
+          "despill": {
+            "algorithm": "edge-local-chroma-spill-suppression",
+            "strength": 1,
+            "edge_radius": 5,
+            "spill_tolerance": 0.15,
+            "minimum_saturation": 0.1,
+            "changed_pixels": 2263,
+            "decontaminated_pixels": 2188,
+            "spill_suppressed_pixels": 2263,
+            "rejected_pixels": 0,
+            "changed_by_cell": {
+              "r0c0": 2263
+            },
+            "alpha_preserved": true
+          }
+        },
+        {
+          "column": 6,
+          "left": 45,
+          "top": 9,
+          "size": [
+            112,
+            192
+          ],
+          "despill": {
+            "algorithm": "edge-local-chroma-spill-suppression",
+            "strength": 1,
+            "edge_radius": 5,
+            "spill_tolerance": 0.15,
+            "minimum_saturation": 0.1,
+            "changed_pixels": 2120,
+            "decontaminated_pixels": 2057,
+            "spill_suppressed_pixels": 2120,
+            "rejected_pixels": 0,
+            "changed_by_cell": {
+              "r0c0": 2120
+            },
+            "alpha_preserved": true
+          }
+        },
+        {
+          "column": 7,
+          "left": 44,
+          "top": 10,
+          "size": [
+            114,
+            192
+          ],
+          "despill": {
+            "algorithm": "edge-local-chroma-spill-suppression",
+            "strength": 1,
+            "edge_radius": 5,
+            "spill_tolerance": 0.15,
+            "minimum_saturation": 0.1,
+            "changed_pixels": 2059,
+            "decontaminated_pixels": 1980,
+            "spill_suppressed_pixels": 2059,
+            "rejected_pixels": 0,
+            "changed_by_cell": {
+              "r0c0": 2059
+            },
+            "alpha_preserved": true
+          }
+        }
+      ]
+    },
+    "jumping": {
+      "source": "../sources/2026-09-18/decoded/jumping.png",
+      "pose_bounds": [
+        [
+          31,
+          160,
+          364,
+          708
+        ],
+        [
+          399,
+          126,
+          778,
+          707
+        ],
+        [
+          785,
+          104,
+          1179,
+          598
+        ],
+        [
+          1188,
+          129,
+          1567,
+          708
+        ],
+        [
+          1603,
+          160,
+          1940,
+          708
+        ]
+      ],
+      "scale": 0.33390705679862304,
+      "frames": [
+        {
+          "column": 0,
+          "left": 42,
+          "top": 18,
+          "size": [
+            111,
+            183
+          ],
+          "despill": {
+            "algorithm": "edge-local-chroma-spill-suppression",
+            "strength": 1,
+            "edge_radius": 5,
+            "spill_tolerance": 0.15,
+            "minimum_saturation": 0.1,
+            "changed_pixels": 1803,
+            "decontaminated_pixels": 1761,
+            "spill_suppressed_pixels": 1803,
+            "rejected_pixels": 0,
+            "changed_by_cell": {
+              "r0c0": 1803
+            },
+            "alpha_preserved": true
+          }
+        },
+        {
+          "column": 1,
+          "left": 38,
+          "top": 7,
+          "size": [
+            127,
+            194
+          ],
+          "despill": {
+            "algorithm": "edge-local-chroma-spill-suppression",
+            "strength": 1,
+            "edge_radius": 5,
+            "spill_tolerance": 0.15,
+            "minimum_saturation": 0.1,
+            "changed_pixels": 2210,
+            "decontaminated_pixels": 2138,
+            "spill_suppressed_pixels": 2210,
+            "rejected_pixels": 0,
+            "changed_by_cell": {
+              "r0c0": 2210
+            },
+            "alpha_preserved": true
+          }
+        },
+        {
+          "column": 2,
+          "left": 32,
+          "top": 5,
+          "size": [
+            132,
+            165
+          ],
+          "despill": {
+            "algorithm": "edge-local-chroma-spill-suppression",
+            "strength": 1,
+            "edge_radius": 5,
+            "spill_tolerance": 0.15,
+            "minimum_saturation": 0.1,
+            "changed_pixels": 1978,
+            "decontaminated_pixels": 1928,
+            "spill_suppressed_pixels": 1978,
+            "rejected_pixels": 0,
+            "changed_by_cell": {
+              "r0c0": 1978
+            },
+            "alpha_preserved": true
+          }
+        },
+        {
+          "column": 3,
+          "left": 35,
+          "top": 8,
+          "size": [
+            127,
+            193
+          ],
+          "despill": {
+            "algorithm": "edge-local-chroma-spill-suppression",
+            "strength": 1,
+            "edge_radius": 5,
+            "spill_tolerance": 0.15,
+            "minimum_saturation": 0.1,
+            "changed_pixels": 2144,
+            "decontaminated_pixels": 2090,
+            "spill_suppressed_pixels": 2144,
+            "rejected_pixels": 0,
+            "changed_by_cell": {
+              "r0c0": 2144
+            },
+            "alpha_preserved": true
+          }
+        },
+        {
+          "column": 4,
+          "left": 41,
+          "top": 18,
+          "size": [
+            113,
+            183
+          ],
+          "despill": {
+            "algorithm": "edge-local-chroma-spill-suppression",
+            "strength": 1,
+            "edge_radius": 5,
+            "spill_tolerance": 0.15,
+            "minimum_saturation": 0.1,
+            "changed_pixels": 1789,
+            "decontaminated_pixels": 1745,
+            "spill_suppressed_pixels": 1789,
+            "rejected_pixels": 0,
+            "changed_by_cell": {
+              "r0c0": 1789
+            },
+            "alpha_preserved": true
+          }
+        }
+      ]
+    },
+    "failed": {
+      "source": "../sources/2026-09-18/decoded/failed.png",
+      "pose_bounds": [
+        [
+          10,
+          169,
+          282,
+          608
+        ],
+        [
+          288,
+          170,
+          555,
+          608
+        ],
+        [
+          559,
+          186,
+          824,
+          608
+        ],
+        [
+          825,
+          220,
+          1089,
+          608
+        ],
+        [
+          1091,
+          265,
+          1352,
+          608
+        ],
+        [
+          1354,
+          200,
+          1618,
+          608
+        ],
+        [
+          1622,
+          167,
+          1888,
+          608
+        ],
+        [
+          1892,
+          167,
+          2158,
+          608
+        ]
+      ],
+      "scale": 0.4399092970521542,
+      "frames": [
+        {
+          "column": 0,
+          "left": 37,
+          "top": 8,
+          "size": [
+            120,
+            193
+          ],
+          "despill": {
+            "algorithm": "edge-local-chroma-spill-suppression",
+            "strength": 1,
+            "edge_radius": 5,
+            "spill_tolerance": 0.15,
+            "minimum_saturation": 0.1,
+            "changed_pixels": 2066,
+            "decontaminated_pixels": 1991,
+            "spill_suppressed_pixels": 2066,
+            "rejected_pixels": 0,
+            "changed_by_cell": {
+              "r0c0": 2066
+            },
+            "alpha_preserved": true
+          }
+        },
+        {
+          "column": 1,
+          "left": 40,
+          "top": 8,
+          "size": [
+            117,
+            193
+          ],
+          "despill": {
+            "algorithm": "edge-local-chroma-spill-suppression",
+            "strength": 1,
+            "edge_radius": 5,
+            "spill_tolerance": 0.15,
+            "minimum_saturation": 0.1,
+            "changed_pixels": 1965,
+            "decontaminated_pixels": 1902,
+            "spill_suppressed_pixels": 1965,
+            "rejected_pixels": 0,
+            "changed_by_cell": {
+              "r0c0": 1965
+            },
+            "alpha_preserved": true
+          }
+        },
+        {
+          "column": 2,
+          "left": 41,
+          "top": 15,
+          "size": [
+            117,
+            186
+          ],
+          "despill": {
+            "algorithm": "edge-local-chroma-spill-suppression",
+            "strength": 1,
+            "edge_radius": 5,
+            "spill_tolerance": 0.15,
+            "minimum_saturation": 0.1,
+            "changed_pixels": 1826,
+            "decontaminated_pixels": 1761,
+            "spill_suppressed_pixels": 1826,
+            "rejected_pixels": 0,
+            "changed_by_cell": {
+              "r0c0": 1826
+            },
+            "alpha_preserved": true
+          }
+        },
+        {
+          "column": 3,
+          "left": 40,
+          "top": 30,
+          "size": [
+            116,
+            171
+          ],
+          "despill": {
+            "algorithm": "edge-local-chroma-spill-suppression",
+            "strength": 1,
+            "edge_radius": 5,
+            "spill_tolerance": 0.15,
+            "minimum_saturation": 0.1,
+            "changed_pixels": 1635,
+            "decontaminated_pixels": 1583,
+            "spill_suppressed_pixels": 1635,
+            "rejected_pixels": 0,
+            "changed_by_cell": {
+              "r0c0": 1635
+            },
+            "alpha_preserved": true
+          }
+        },
+        {
+          "column": 4,
+          "left": 42,
+          "top": 50,
+          "size": [
+            115,
+            151
+          ],
+          "despill": {
+            "algorithm": "edge-local-chroma-spill-suppression",
+            "strength": 1,
+            "edge_radius": 5,
+            "spill_tolerance": 0.15,
+            "minimum_saturation": 0.1,
+            "changed_pixels": 1585,
+            "decontaminated_pixels": 1536,
+            "spill_suppressed_pixels": 1585,
+            "rejected_pixels": 0,
+            "changed_by_cell": {
+              "r0c0": 1585
+            },
+            "alpha_preserved": true
+          }
+        },
+        {
+          "column": 5,
+          "left": 42,
+          "top": 22,
+          "size": [
+            116,
+            179
+          ],
+          "despill": {
+            "algorithm": "edge-local-chroma-spill-suppression",
+            "strength": 1,
+            "edge_radius": 5,
+            "spill_tolerance": 0.15,
+            "minimum_saturation": 0.1,
+            "changed_pixels": 1715,
+            "decontaminated_pixels": 1664,
+            "spill_suppressed_pixels": 1715,
+            "rejected_pixels": 0,
+            "changed_by_cell": {
+              "r0c0": 1715
+            },
+            "alpha_preserved": true
+          }
+        },
+        {
+          "column": 6,
+          "left": 41,
+          "top": 7,
+          "size": [
+            117,
+            194
+          ],
+          "despill": {
+            "algorithm": "edge-local-chroma-spill-suppression",
+            "strength": 1,
+            "edge_radius": 5,
+            "spill_tolerance": 0.15,
+            "minimum_saturation": 0.1,
+            "changed_pixels": 1994,
+            "decontaminated_pixels": 1921,
+            "spill_suppressed_pixels": 1994,
+            "rejected_pixels": 0,
+            "changed_by_cell": {
+              "r0c0": 1994
+            },
+            "alpha_preserved": true
+          }
+        },
+        {
+          "column": 7,
+          "left": 41,
+          "top": 7,
+          "size": [
+            117,
+            194
+          ],
+          "despill": {
+            "algorithm": "edge-local-chroma-spill-suppression",
+            "strength": 1,
+            "edge_radius": 5,
+            "spill_tolerance": 0.15,
+            "minimum_saturation": 0.1,
+            "changed_pixels": 2058,
+            "decontaminated_pixels": 1967,
+            "spill_suppressed_pixels": 2058,
+            "rejected_pixels": 0,
+            "changed_by_cell": {
+              "r0c0": 2058
+            },
+            "alpha_preserved": true
+          }
+        }
+      ]
+    }
+  }
+}

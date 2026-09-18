@@ -1,0 +1,368 @@
+{
+  "frame_indexing": "zero-based",
+  "read_only": true,
+  "source_manifest_method": "stable-slots",
+  "root_cause": "Equal-width source viewports pass through foreground hair. The viewports are later centered within 192x208 cells, hiding clipping from atlas-edge validation. Current extractor has a components path and equal-slot fallback; the manifest does not distinguish which internal branch was used. Recovered equal crop windows and seam continuity strongly support fallback slicing.",
+  "failed": {
+    "severity": "major",
+    "internal_crop_x": [
+      46,
+      145
+    ],
+    "crop_right_exclusive": true,
+    "frames": [
+      {
+        "frame": 0,
+        "longest_left_and_right_opaque_boundary_runs": [
+          {
+            "x": 46,
+            "y_range_inclusive": [
+              106,
+              110
+            ],
+            "length": 5
+          },
+          {
+            "x": 144,
+            "y_range_inclusive": [
+              71,
+              128
+            ],
+            "length": 58
+          }
+        ]
+      },
+      {
+        "frame": 1,
+        "longest_left_and_right_opaque_boundary_runs": [
+          {
+            "x": 46,
+            "y_range_inclusive": [
+              61,
+              103
+            ],
+            "length": 43
+          },
+          {
+            "x": 144,
+            "y_range_inclusive": [
+              104,
+              123
+            ],
+            "length": 20
+          }
+        ]
+      },
+      {
+        "frame": 2,
+        "longest_left_and_right_opaque_boundary_runs": [
+          {
+            "x": 46,
+            "y_range_inclusive": [
+              108,
+              122
+            ],
+            "length": 15
+          },
+          {
+            "x": 144,
+            "y_range_inclusive": [
+              115,
+              125
+            ],
+            "length": 11
+          }
+        ]
+      },
+      {
+        "frame": 3,
+        "longest_left_and_right_opaque_boundary_runs": [
+          {
+            "x": 46,
+            "y_range_inclusive": [
+              125,
+              134
+            ],
+            "length": 10
+          },
+          {
+            "x": 144,
+            "y_range_inclusive": [
+              138,
+              141
+            ],
+            "length": 4
+          }
+        ]
+      },
+      {
+        "frame": 4,
+        "longest_left_and_right_opaque_boundary_runs": [
+          {
+            "x": 47,
+            "y_range_inclusive": [
+              141,
+              152
+            ],
+            "length": 12
+          },
+          {
+            "x": 144,
+            "y_range_inclusive": [
+              129,
+              140
+            ],
+            "length": 12
+          }
+        ]
+      },
+      {
+        "frame": 5,
+        "longest_left_and_right_opaque_boundary_runs": [
+          {
+            "x": 46,
+            "y_range_inclusive": [
+              126,
+              142
+            ],
+            "length": 17
+          },
+          {
+            "x": 144,
+            "y_range_inclusive": [
+              115,
+              130
+            ],
+            "length": 16
+          }
+        ]
+      },
+      {
+        "frame": 6,
+        "longest_left_and_right_opaque_boundary_runs": [
+          {
+            "x": 46,
+            "y_range_inclusive": [
+              113,
+              131
+            ],
+            "length": 19
+          },
+          {
+            "x": 144,
+            "y_range_inclusive": [
+              105,
+              122
+            ],
+            "length": 18
+          }
+        ]
+      },
+      {
+        "frame": 7,
+        "longest_left_and_right_opaque_boundary_runs": [
+          {
+            "x": 46,
+            "y_range_inclusive": [
+              103,
+              123
+            ],
+            "length": 21
+          },
+          {
+            "x": 142,
+            "y_range_inclusive": [
+              106,
+              115
+            ],
+            "length": 10
+          }
+        ]
+      }
+    ],
+    "specific_evidence": [
+      "f0 right hair is flat-cut at x144, with 58 opaque pixels continuously from y71 through y128.",
+      "f1 left boundary contains the continuation/sibling sliver, with a 43 pixel run from y61 through y103.",
+      "f3 has a disconnected right-edge component of 24 pixels in bbox [143,137,145,151].",
+      "f1 through f6 include alternating clipped main hair and neighboring fragments at the common slot boundaries.",
+      "f7 still has a flat left boundary; last-frame right edge is more naturally bounded."
+    ],
+    "diagnostic_rejoin": {
+      "viewport_width": 99,
+      "result": "Rejoining x46:145 without scaling reconstructs a crowded source strip. Hair touches/crosses between neighboring characters.",
+      "large_connected_component_bboxes": [
+        [
+          0,
+          6,
+          396,
+          202
+        ],
+        [
+          397,
+          10,
+          791,
+          202
+        ]
+      ],
+      "safe_lossless_resegmentation": false,
+      "reason": "Neighboring silhouettes connect across the old boundaries, some hair is occluded or blended at crossings, and source high-resolution strip is absent from retained run. Column cuts cannot separate full silhouettes."
+    },
+    "recommended_fix": "Regenerate one coherent eight-pose failed row from canonical reference, requiring larger transparent/chroma gutters and zero hair overlap; extract complete pose groups with shared scale and feet alignment. Preserve the crouch height trajectory."
+  },
+  "idle": {
+    "severity": "moderate",
+    "internal_crop_x": [
+      38,
+      153
+    ],
+    "crop_right_exclusive": true,
+    "frames": [
+      {
+        "frame": 0,
+        "longest_left_and_right_opaque_boundary_runs": [
+          {
+            "x": 38,
+            "y_range_inclusive": [
+              100,
+              104
+            ],
+            "length": 5
+          },
+          {
+            "x": 152,
+            "y_range_inclusive": [
+              88,
+              100
+            ],
+            "length": 13
+          }
+        ]
+      },
+      {
+        "frame": 1,
+        "longest_left_and_right_opaque_boundary_runs": [
+          {
+            "x": 38,
+            "y_range_inclusive": [
+              93,
+              102
+            ],
+            "length": 10
+          },
+          {
+            "x": 152,
+            "y_range_inclusive": [
+              91,
+              106
+            ],
+            "length": 16
+          }
+        ]
+      },
+      {
+        "frame": 2,
+        "longest_left_and_right_opaque_boundary_runs": [
+          {
+            "x": 38,
+            "y_range_inclusive": [
+              93,
+              109
+            ],
+            "length": 17
+          },
+          {
+            "x": 152,
+            "y_range_inclusive": [
+              98,
+              113
+            ],
+            "length": 16
+          }
+        ]
+      },
+      {
+        "frame": 3,
+        "longest_left_and_right_opaque_boundary_runs": [
+          {
+            "x": 38,
+            "y_range_inclusive": [
+              99,
+              111
+            ],
+            "length": 13
+          },
+          {
+            "x": 152,
+            "y_range_inclusive": [
+              93,
+              106
+            ],
+            "length": 14
+          }
+        ]
+      },
+      {
+        "frame": 4,
+        "longest_left_and_right_opaque_boundary_runs": [
+          {
+            "x": 38,
+            "y_range_inclusive": [
+              93,
+              98
+            ],
+            "length": 6
+          },
+          {
+            "x": 152,
+            "y_range_inclusive": [
+              103,
+              107
+            ],
+            "length": 5
+          }
+        ]
+      },
+      {
+        "frame": 5,
+        "longest_left_and_right_opaque_boundary_runs": [
+          {
+            "x": 38,
+            "y_range_inclusive": [
+              100,
+              110
+            ],
+            "length": 11
+          },
+          {
+            "x": 152,
+            "y_range_inclusive": [
+              99,
+              104
+            ],
+            "length": 6
+          }
+        ]
+      }
+    ],
+    "specific_evidence": [
+      "All six frames share an exact 115 pixel horizontal viewport, despite pose/foot drift.",
+      "f1 shows a slender neighboring hair piece along the left boundary.",
+      "f2 has straight opaque edge runs 17px left and 16px right.",
+      "Rejoining the viewports restores a crowded strip with touching adjacent hair tips; the artifact is smaller than failed but is the same class."
+    ],
+    "recommended_fix": "Repair as a coherent six-frame idle row if eliminating slicing throughout retained rows is required; do not merely recenter current cropped tiles."
+  },
+  "other_retained_rows": {
+    "waving": "No comparable fixed-slot vertical cut or sibling fragment found. Natural rounded hair extents.",
+    "waiting": "No comparable fixed-slot vertical cut or sibling fragment found.",
+    "running_working_state": "No comparable fixed-slot vertical cut or sibling fragment found.",
+    "review": "No comparable fixed-slot vertical cut or sibling fragment found.",
+    "look_rows_9_10": "No common fixed-slot slice signature or sibling fragment found in visual contact inspection; preserve geometry."
+  },
+  "diagnostics": [
+    "failed-slicing.png",
+    "failed-joined-diagnostic.png",
+    "idle-slicing-diagnostic.png"
+  ],
+  "note": "Diagnostic rejoin is evidence only and must not be packaged as repaired art."
+}

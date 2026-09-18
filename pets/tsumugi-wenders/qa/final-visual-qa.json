@@ -1,0 +1,266 @@
+{
+  "visual_qa": "pass",
+  "stage": "final exported temporal sequence review",
+  "motion_playback_status": "complete via frame-decoded timed sequence and repeat/state-transition inspection; no continuous live playback claim",
+  "scope": [
+    "idle",
+    "running-right",
+    "running-left",
+    "jumping",
+    "failed"
+  ],
+  "inspected_files": [
+    "qa/registered-new-rows.png",
+    "decoded/failed.png",
+    "frames/failed/*.png",
+    "decoded/idle.png"
+  ],
+  "rows": [
+    {
+      "row": 0,
+      "state": "idle",
+      "verdict": "pass",
+      "reason": "Six cohesive neutral/blink poses retain constant apparent head and body scale, aligned stance, complete curling outer hair, and visible facial microvariation. No former internal crop edges or sibling hair fragments remain.",
+      "warnings": [
+        "App-equivalent timing keeps eyes closed across two consecutive frames for 1320 ms. This reads as a slow/restful blink and is accepted."
+      ],
+      "motion_verdict": "pass",
+      "motion_reasons": [
+        "Decoded timed loop remains a calm blink with stable feet and coherent size; no former sibling hair sliver or loop-position reset."
+      ],
+      "motion_warnings": [
+        "App-equivalent timing keeps eyes closed across two consecutive frames for 1320 ms. This reads as a slow/restful blink and is accepted."
+      ]
+    },
+    {
+      "row": 1,
+      "state": "running-right",
+      "verdict": "pass",
+      "reason": "All eight poses face screen-right with hair trailing left, alternating extended/compressed/bent-knee leg silhouettes and active arm motion. Identity and apparent head scale remain cohesive; no whole-sprite rotation, clipping, or large per-frame scaling pop is visible.",
+      "warnings": [
+        "Stride rhythm remains stylized and uneven: extended/compressed pair repeats early in the cycle, then bent/crossing poses follow. Accept as a limited eight-frame running cycle, not a rigorously alternating biomechanical gait.",
+        "Last-frame dwell is 220 ms versus 120 ms for others, so a cadence accent remains by app design."
+      ],
+      "motion_verdict": "pass_with_warnings",
+      "motion_reasons": [
+        "Eight ordered poses face right throughout; active arms, bent knees and changing leg extension remain readable. No wrong-facing frame, major size jump, or silhouette clipping is visible in the exported sequence or repeat boundary."
+      ],
+      "motion_warnings": [
+        "Stride rhythm remains stylized and uneven: extended/compressed pair repeats early in the cycle, then bent/crossing poses follow. Accept as a limited eight-frame running cycle, not a rigorously alternating biomechanical gait.",
+        "Last-frame dwell is 220 ms versus 120 ms for others, so a cadence accent remains by app design."
+      ]
+    },
+    {
+      "row": 2,
+      "state": "running-left",
+      "verdict": "pass",
+      "reason": "Eight consistent profile poses face screen-left with hair trailing right. Extended contacts, backward recovery and tucked knees provide materially more limb variation than the old cycle. Hair and limbs are complete with stable apparent head scale.",
+      "warnings": [
+        "Frames 0 and 7 are similar, and several recovery poses recur, so the loop has an uneven cadence and a noticeable settle at its end. Accepted as stylized limited-frame movement."
+      ],
+      "motion_verdict": "pass_with_warnings",
+      "motion_reasons": [
+        "Eight ordered poses face left throughout; extended leg, recovery and tuck poses remain readable with consistent head scale. The wrap from last to first has compatible posture."
+      ],
+      "motion_warnings": [
+        "Frames 0 and 7 are similar, and several recovery poses recur, so the loop has an uneven cadence and a noticeable settle at its end. Accepted as stylized limited-frame movement."
+      ]
+    },
+    {
+      "row": 4,
+      "state": "jumping",
+      "verdict": "pass",
+      "reason": "Five poses form a single standing/lift/apex/descent/standing trajectory. Frame 2 has the highest feet and bent knees. First and last poses have matching apparent scale; the formerly oversized first-frame head/body discontinuity is absent.",
+      "warnings": [
+        "The standing jump endpoint appears slightly more compact than the idle pose at the state transition; mild shape/proportion change remains, without a large within-cycle head-size jump.",
+        "Three jumps still occur in app-equivalent playback because the application repeats the entire five-frame action three times. This is not caused by extra jump phases inside the new row."
+      ],
+      "motion_verdict": "pass_with_warnings",
+      "motion_reasons": [
+        "Decoded five-frame sequence contains one rise, bent-knee apex, descent and settled pose. First and last frames are compatible, removing the formerly oversized first-frame reset. Third-cycle exit changes to idle in the exported app sequence."
+      ],
+      "motion_warnings": [
+        "The standing jump endpoint appears slightly more compact than the idle pose at the state transition; mild shape/proportion change remains, without a large within-cycle head-size jump.",
+        "Three jumps still occur in app-equivalent playback because the application repeats the entire five-frame action three times. This is not caused by extra jump phases inside the new row."
+      ]
+    },
+    {
+      "row": 5,
+      "state": "failed",
+      "verdict": "pass",
+      "reason": "All eight newly generated poses have complete curved outer hair and tapered curling tips. Former long vertical clipping rails and sibling fragments are absent in the source and registered frames. The body descends into a dejected crouch at frame 4 and recovers through frames 5-7, with consistent character identity and stable feet baseline.",
+      "warnings": [],
+      "hair_edge_longest_constant_x_runs_left_right_px": [
+        [
+          8,
+          7
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          6
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          11,
+          7
+        ],
+        [
+          11,
+          8
+        ],
+        [
+          8,
+          7
+        ],
+        [
+          11,
+          10
+        ]
+      ],
+      "hair_metric_region_y": [
+        30,
+        150
+      ],
+      "hair_metric_alpha_threshold": 128,
+      "comparison": "Rejected failed version had 12-22px vertical rails at hard angular outer-hair junctions; original damaged atlas had a 58px rail. Current 6-11px runs lie on natural curved contours and are not visually sliced.",
+      "motion_verdict": "pass",
+      "motion_reasons": [
+        "Eight-frame sequence descends into one crouch and recovers. Complete curling hair remains present in every decoded frame, with no transferred sibling fragments or long vertical cuts. Repeat boundary and switch to idle are compatible."
+      ],
+      "motion_warnings": []
+    }
+  ],
+  "global_warnings": [
+    "Directional running retains stylized, somewhat uneven eight-frame cadence; accepted because poses remain directional and readable.",
+    "A mild shape/proportion change is visible from settled jump pose to idle.",
+    "Application-level three-repeat policy remains observable; atlas-only repair does not change that behavior.",
+    "Review is based on decoded timed sequences, not continuous live playback."
+  ],
+  "look_rows": "Unchanged shape; outside this new-row review, parent checking numeric preservation.",
+  "reviewed_source_sha256": "5bb448fd1e78aa6b4e3b4fbd43154262532ba23935ec94a66b24509640bcb502",
+  "required_repairs": [],
+  "retained_review": {
+    "row": 8,
+    "state": "review",
+    "motion_verdict": "pass",
+    "motion_reasons": [
+      "Retained six-frame sequence reads as head tilts, a thinking hand pose and blink. Feet remain visually registered; head/torso sway is intentional pose change. No major scale discontinuity or wrong-state pose is visible."
+    ],
+    "motion_warnings": [
+      "Original artwork and six-pose gesture rhythm are retained."
+    ]
+  },
+  "motion_review_method": {
+    "method": "Decoded each lossless animated WebP into ordered frames and inspected timestamped temporal contact sheets plus action-repeat and third-cycle-to-idle boundary contacts. Read actual durations stored in each WebP.",
+    "live_playback_observed": false,
+    "limitations": "Visual continuity is judged from ordered exported poses and their recorded timing, not continuous human-like real-time viewing. Browser control behavior is reviewed by parent.",
+    "artifacts": [
+      "qa/motion-temporal-contact.png",
+      "qa/motion-boundaries-contact.png"
+    ],
+    "timing": {
+      "idle": {
+        "frame_count": 6,
+        "frame_duration_ms": [
+          1680,
+          660,
+          660,
+          840,
+          840,
+          1920
+        ],
+        "cycle_duration_ms": 6600,
+        "sha256": "cc58b681a546d17788f40e647341373da4f4fe6555b417ed8ad293f5494cca06"
+      },
+      "running-right": {
+        "frame_count": 8,
+        "frame_duration_ms": [
+          120,
+          120,
+          120,
+          120,
+          120,
+          120,
+          120,
+          220
+        ],
+        "cycle_duration_ms": 1060,
+        "sha256": "397a39fdda38cbdd212dddb49564af9f8f8cf1106644094671b3398520bcf48c"
+      },
+      "running-left": {
+        "frame_count": 8,
+        "frame_duration_ms": [
+          120,
+          120,
+          120,
+          120,
+          120,
+          120,
+          120,
+          220
+        ],
+        "cycle_duration_ms": 1060,
+        "sha256": "c802b13ad1f2cf50b048988f849393445fae1b049dc7a4316d4cc72578169568"
+      },
+      "jumping": {
+        "frame_count": 5,
+        "frame_duration_ms": [
+          140,
+          140,
+          140,
+          140,
+          280
+        ],
+        "cycle_duration_ms": 840,
+        "sha256": "44129ef2265a7197915dbe1d2aa6ac10b52cf2077dc473858f458f56c925064a"
+      },
+      "failed": {
+        "frame_count": 8,
+        "frame_duration_ms": [
+          140,
+          140,
+          140,
+          140,
+          140,
+          140,
+          140,
+          240
+        ],
+        "cycle_duration_ms": 1220,
+        "sha256": "3414493ef2eacf66fcf841eb1f8b376145051449c1b4a717a58a85a1d0881056"
+      },
+      "review": {
+        "frame_count": 6,
+        "frame_duration_ms": [
+          150,
+          150,
+          150,
+          150,
+          150,
+          280
+        ],
+        "cycle_duration_ms": 1030,
+        "sha256": "083449ad98963563f644ea90620274ff9df1758715ae09eb2f2c3761b1f4a157"
+      }
+    },
+    "app_sequence_counts": {
+      "running-right": 30,
+      "running-left": 30,
+      "jumping": 21,
+      "failed": 30
+    },
+    "app_sequence_explanation": "Each action export contains three complete action cycles followed by six idle frames."
+  },
+  "spritesheet_sha256": "3aedeccdab8ebd766f743b822fa976d4a0c5b30e300251a9c7493898c3555d13",
+  "browser_checks": {
+    "verified": "parent inspected jump start/apex, failed frames0/1, frame-step controls and image loading in local browser",
+    "installed_app_live_playback_observed": false
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "generation": "OpenAI built-in image_gen, via hatch-pet/imagegen skills",
+  "baseline_commit": "e030644bd67b95cbdcfa9e398c9628e1e09fc738",
+  "jobs": [
+    {
+      "state": "idle",
+      "source": "decoded/idle.png",
+      "sha256": "b10a11287a5075a43378fb4a5bf562efb579b52716a5e9641b66c7fb47a9844b",
+      "prompt": "prompts/idle.md",
+      "references": [
+        "references/idle-6.png",
+        "references/layout-guides/idle.png"
+      ],
+      "status": "accepted"
+    },
+    {
+      "state": "running-right",
+      "source": "decoded/running-right.png",
+      "sha256": "cb01386211b65f2d9e8afc240da0196874b404a857dc8c223907e738031943c6",
+      "prompt": "prompts/running-right.md",
+      "references": [
+        "references/canonical-clean.png",
+        "references/layout-guides/running-right-gait.png",
+        "references/layout-guides/running-right.png"
+      ],
+      "status": "accepted"
+    },
+    {
+      "state": "running-left",
+      "source": "decoded/running-left.png",
+      "sha256": "571be30d27888c5e03c59a6e63ae46b338a39bb40aa520721e77b6746a517c92",
+      "prompt": "prompts/running-left.md",
+      "references": [
+        "references/canonical-clean.png",
+        "references/layout-guides/running-left-gait.png",
+        "references/layout-guides/running-left.png"
+      ],
+      "status": "accepted"
+    },
+    {
+      "state": "jumping",
+      "source": "decoded/jumping.png",
+      "sha256": "09408e972fc6a4a32ecbf6780e8ee257b90bf060cd8a59853e68197e0d6a5c8e",
+      "prompt": "prompts/jumping.md",
+      "references": [
+        "references/canonical-clean.png",
+        "references/layout-guides/jumping.png"
+      ],
+      "status": "accepted"
+    },
+    {
+      "state": "failed",
+      "source": "decoded/failed.png",
+      "sha256": "5bb448fd1e78aa6b4e3b4fbd43154262532ba23935ec94a66b24509640bcb502",
+      "prompt": "prompts/failed.md",
+      "references": [
+        "references/idle-6.png",
+        "references/layout-guides/failed.png"
+      ],
+      "status": "accepted"
+    }
+  ],
+  "processing_scripts": {
+    "register_tsumugi_rows.py": "c23438d930faeed6bd9569e31a952e4b6cd24952562c3a1db31dee7d7b53122e",
+    "repair_tsumugi.py": "5dce793469f71d40bff7e17dc46670e3b867a7af2c7bbe1fa48d48ab8e43e292",
+    "review_tsumugi.py": "fda4aa7d0deb0109dbac4066577c70aa66b09defce20cef464e3626c64dcb2b2"
+  },
+  "skill_helpers_sha256": {
+    "extract_strip_frames.py": "86301292945550c4b2c318815c9bfd97a1f9b3fa4e83aea7b31bcfa2ca20e1f2",
+    "despill_chroma_edges.py": "dc93a5e752f4100e55010205462a8e7272bac451ee7e29b525abd6157a7fe309"
+  }
+}
