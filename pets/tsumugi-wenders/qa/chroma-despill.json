@@ -10,10 +10,12 @@
   "historical_original_despill": "chroma-despill-original.json",
   "regenerated_states": [
     "idle",
-    "running-right",
     "running-left",
     "jumping",
     "failed"
   ],
-  "transparent_rgb_residue_pixels": 0
+  "transparent_rgb_residue_pixels": 0,
+  "derived_states": {
+    "running-right": "pixel-exact horizontal mirror of cleaned running-left cells; no additional despill or resampling"
+  }
 }

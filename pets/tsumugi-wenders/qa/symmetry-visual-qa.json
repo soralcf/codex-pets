@@ -1,0 +1,163 @@
+{
+  "verdict": "pass",
+  "scope": "Independent visual QA of running-right row 1 and running-left row 2 only.",
+  "inspected": [
+    "previews/running-symmetry.png",
+    "previews/contact-sheet.png",
+    "previews/running-symmetry.webp frame metadata",
+    "final/spritesheet.webp decoded pixels",
+    "before.webp decoded pixels"
+  ],
+  "method": "Viewed static frame strips and contact sheet; inspected animation frame count and durations and compared decoded sprite pixels. No live playback was observed.",
+  "findings": {
+    "scale": "Matching scale and silhouette dimensions in corresponding left/right cells.",
+    "details": "Hair, face, hair ornament, clothing, limbs and shoes correspond under horizontal mirroring; no apparent detail loss.",
+    "direction": "Row 2 faces left; row 1 faces right. All eight corresponding cells are exact horizontal mirrors.",
+    "cropping": "All eight frames retain complete hair, hands and shoes within their cells; no clipping visible.",
+    "cadence": "Same frame order is preserved. The paired preview has eight frames, durations 120 ms for frames 1–7 and 220 ms for frame 8, so both directions share the same cadence. The longer final hold is present in the preview; live smoothness was not assessed.",
+    "unchanged_rows": "Decoded before/after comparison finds only row 1 changed; canonical row 2 and all other rows remain byte-identical."
+  },
+  "evidence": {
+    "all_eight_cells_exact_mirrors": true,
+    "changed_rows": [
+      1
+    ],
+    "preview_duration_ms": [
+      120,
+      120,
+      120,
+      120,
+      120,
+      120,
+      120,
+      220
+    ],
+    "cell_dimensions": [
+      192,
+      208
+    ],
+    "alpha_bounds": [
+      {
+        "frame": 0,
+        "left": [
+          44,
+          9,
+          157,
+          201
+        ],
+        "right": [
+          35,
+          9,
+          148,
+          201
+        ]
+      },
+      {
+        "frame": 1,
+        "left": [
+          45,
+          8,
+          158,
+          200
+        ],
+        "right": [
+          34,
+          8,
+          147,
+          200
+        ]
+      },
+      {
+        "frame": 2,
+        "left": [
+          42,
+          9,
+          157,
+          201
+        ],
+        "right": [
+          35,
+          9,
+          150,
+          201
+        ]
+      },
+      {
+        "frame": 3,
+        "left": [
+          45,
+          10,
+          157,
+          202
+        ],
+        "right": [
+          35,
+          10,
+          147,
+          202
+        ]
+      },
+      {
+        "frame": 4,
+        "left": [
+          38,
+          9,
+          158,
+          201
+        ],
+        "right": [
+          34,
+          9,
+          154,
+          201
+        ]
+      },
+      {
+        "frame": 5,
+        "left": [
+          43,
+          8,
+          159,
+          200
+        ],
+        "right": [
+          33,
+          8,
+          149,
+          200
+        ]
+      },
+      {
+        "frame": 6,
+        "left": [
+          45,
+          9,
+          157,
+          201
+        ],
+        "right": [
+          35,
+          9,
+          147,
+          201
+        ]
+      },
+      {
+        "frame": 7,
+        "left": [
+          44,
+          10,
+          158,
+          202
+        ],
+        "right": [
+          34,
+          10,
+          148,
+          202
+        ]
+      }
+    ]
+  },
+  "issues": []
+}

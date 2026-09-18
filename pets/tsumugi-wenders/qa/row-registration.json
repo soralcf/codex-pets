@@ -190,254 +190,6 @@
         }
       ]
     },
-    "running-right": {
-      "source": "../sources/2026-09-18/decoded/running-right.png",
-      "pose_bounds": [
-        [
-          22,
-          211,
-          262,
-          578
-        ],
-        [
-          289,
-          211,
-          508,
-          587
-        ],
-        [
-          561,
-          211,
-          820,
-          577
-        ],
-        [
-          834,
-          211,
-          1046,
-          587
-        ],
-        [
-          1103,
-          210,
-          1316,
-          586
-        ],
-        [
-          1372,
-          211,
-          1584,
-          587
-        ],
-        [
-          1644,
-          210,
-          1911,
-          577
-        ],
-        [
-          1915,
-          210,
-          2129,
-          587
-        ]
-      ],
-      "scale": 0.5092838196286472,
-      "frames": [
-        {
-          "column": 0,
-          "left": 34,
-          "top": 9,
-          "size": [
-            122,
-            187
-          ],
-          "despill": {
-            "algorithm": "edge-local-chroma-spill-suppression",
-            "strength": 1,
-            "edge_radius": 5,
-            "spill_tolerance": 0.15,
-            "minimum_saturation": 0.1,
-            "changed_pixels": 2177,
-            "decontaminated_pixels": 2081,
-            "spill_suppressed_pixels": 2177,
-            "rejected_pixels": 0,
-            "changed_by_cell": {
-              "r0c0": 2177
-            },
-            "alpha_preserved": true
-          }
-        },
-        {
-          "column": 1,
-          "left": 33,
-          "top": 8,
-          "size": [
-            112,
-            191
-          ],
-          "despill": {
-            "algorithm": "edge-local-chroma-spill-suppression",
-            "strength": 1,
-            "edge_radius": 5,
-            "spill_tolerance": 0.15,
-            "minimum_saturation": 0.1,
-            "changed_pixels": 2087,
-            "decontaminated_pixels": 1999,
-            "spill_suppressed_pixels": 2087,
-            "rejected_pixels": 0,
-            "changed_by_cell": {
-              "r0c0": 2087
-            },
-            "alpha_preserved": true
-          }
-        },
-        {
-          "column": 2,
-          "left": 34,
-          "top": 9,
-          "size": [
-            132,
-            186
-          ],
-          "despill": {
-            "algorithm": "edge-local-chroma-spill-suppression",
-            "strength": 1,
-            "edge_radius": 5,
-            "spill_tolerance": 0.15,
-            "minimum_saturation": 0.1,
-            "changed_pixels": 2322,
-            "decontaminated_pixels": 2216,
-            "spill_suppressed_pixels": 2322,
-            "rejected_pixels": 0,
-            "changed_by_cell": {
-              "r0c0": 2322
-            },
-            "alpha_preserved": true
-          }
-        },
-        {
-          "column": 3,
-          "left": 33,
-          "top": 10,
-          "size": [
-            108,
-            191
-          ],
-          "despill": {
-            "algorithm": "edge-local-chroma-spill-suppression",
-            "strength": 1,
-            "edge_radius": 5,
-            "spill_tolerance": 0.15,
-            "minimum_saturation": 0.1,
-            "changed_pixels": 2057,
-            "decontaminated_pixels": 1987,
-            "spill_suppressed_pixels": 2057,
-            "rejected_pixels": 0,
-            "changed_by_cell": {
-              "r0c0": 2057
-            },
-            "alpha_preserved": true
-          }
-        },
-        {
-          "column": 4,
-          "left": 33,
-          "top": 9,
-          "size": [
-            108,
-            191
-          ],
-          "despill": {
-            "algorithm": "edge-local-chroma-spill-suppression",
-            "strength": 1,
-            "edge_radius": 5,
-            "spill_tolerance": 0.15,
-            "minimum_saturation": 0.1,
-            "changed_pixels": 2010,
-            "decontaminated_pixels": 1926,
-            "spill_suppressed_pixels": 2010,
-            "rejected_pixels": 0,
-            "changed_by_cell": {
-              "r0c0": 2010
-            },
-            "alpha_preserved": true
-          }
-        },
-        {
-          "column": 5,
-          "left": 33,
-          "top": 8,
-          "size": [
-            108,
-            191
-          ],
-          "despill": {
-            "algorithm": "edge-local-chroma-spill-suppression",
-            "strength": 1,
-            "edge_radius": 5,
-            "spill_tolerance": 0.15,
-            "minimum_saturation": 0.1,
-            "changed_pixels": 2213,
-            "decontaminated_pixels": 2127,
-            "spill_suppressed_pixels": 2213,
-            "rejected_pixels": 0,
-            "changed_by_cell": {
-              "r0c0": 2213
-            },
-            "alpha_preserved": true
-          }
-        },
-        {
-          "column": 6,
-          "left": 32,
-          "top": 9,
-          "size": [
-            136,
-            187
-          ],
-          "despill": {
-            "algorithm": "edge-local-chroma-spill-suppression",
-            "strength": 1,
-            "edge_radius": 5,
-            "spill_tolerance": 0.15,
-            "minimum_saturation": 0.1,
-            "changed_pixels": 2369,
-            "decontaminated_pixels": 2260,
-            "spill_suppressed_pixels": 2369,
-            "rejected_pixels": 0,
-            "changed_by_cell": {
-              "r0c0": 2369
-            },
-            "alpha_preserved": true
-          }
-        },
-        {
-          "column": 7,
-          "left": 33,
-          "top": 10,
-          "size": [
-            109,
-            192
-          ],
-          "despill": {
-            "algorithm": "edge-local-chroma-spill-suppression",
-            "strength": 1,
-            "edge_radius": 5,
-            "spill_tolerance": 0.15,
-            "minimum_saturation": 0.1,
-            "changed_pixels": 2099,
-            "decontaminated_pixels": 2003,
-            "spill_suppressed_pixels": 2099,
-            "rejected_pixels": 0,
-            "changed_by_cell": {
-              "r0c0": 2099
-            },
-            "alpha_preserved": true
-          }
-        }
-      ]
-    },
     "running-left": {
       "source": "../sources/2026-09-18/decoded/running-left.png",
       "pose_bounds": [
@@ -1091,6 +843,22 @@
           }
         }
       ]
+    },
+    "running-right": {
+      "method": "horizontal-mirror-of-final-cells",
+      "source_state": "running-left",
+      "frame_mapping": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "decision": "User chose left-facing gait as canonical; mirror details and accessories with each cell.",
+      "resampling": false
     }
   }
 }

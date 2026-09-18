@@ -19,6 +19,7 @@ cp pets/tsumugi-wenders/spritesheet.webp ~/.codex/pets/tsumugi-wenders/
 ## 2026-09-18 动作修复
 
 - 重绘待机、左右跑步、跳跃和失败五行动作，保留人物的金发、绿瞳、发夹和制服设定。
+- 左右跑步统一采用向左跑的画风：向右跑由左侧最终八帧逐帧水平镜像生成，不再使用独立生成的右侧原图。帧序、尺寸、透明度与动作节奏完全对应；发夹等饰物随人物一起翻转。
 - 修复失败和待机行的纵向切片：原图中的头发被切断后混入相邻帧。现在按完整人物轮廓提取，无法识别完整姿势时直接报错，不再退回等宽切片。
 - 跳跃采用统一缩放比例，保留起跳、腾空、落地的位置关系，去掉首帧突然放大的效果。
 - 审阅动作按脚部锚点对齐；保留动作的头发外缘做局部白色底边修复，不改透明度、脸部或衣服内部细节。16 向视线的姿势和透明轮廓保持不变。
@@ -30,6 +31,8 @@ cp pets/tsumugi-wenders/spritesheet.webp ~/.codex/pets/tsumugi-wenders/
 | 审阅 | 6.31 px | 0.70 px |
 
 用浏览器打开本地的 [逐帧对照页](previews/compare.html)，可以暂停、逐帧切换、慢放和改变背景颜色。也可直接查看[失败动作对照](previews/failed-comparison.webp)、[跳跃对照](previews/jumping-comparison.webp)、[向右跑对照](previews/running-right-comparison.webp)和[向左跑对照](previews/running-left-comparison.webp)。
+
+[左右同步动画](previews/running-symmetry.webp)和[左右逐帧图](previews/running-symmetry.png)用于核对两侧的一致性。构建检查要求每一帧翻转后的 RGBA 像素差为零，避免分别缩放造成身高、头身比例和细节差异。
 
 本次核对的桌面播放器将非待机动作播放三遍，再进入慢速待机；跳跃固定读取 5 帧，左右跑步固定读取 8 帧。重复次数和每帧时长由播放器决定，不能靠增加精灵图中的图片数量改变。对照页复现这一节奏，也提供持续循环。跑步仍是有限帧数下的风格化步态，部分步幅和末帧停顿不完全均匀。
 
@@ -50,6 +53,8 @@ cp pets/tsumugi-wenders/spritesheet.webp ~/.codex/pets/tsumugi-wenders/
 
 本次通过 OpenAI 内置图像生成工具重绘。采用的原始行图、提示词和参考图保存在 [sources/2026-09-18](sources/2026-09-18/manifest.json)，被否决的候选图未打包。前一版精灵图保留在 [previews/before-2026-09-18.webp](previews/before-2026-09-18.webp)，用于对照和还原。
 
+原独立生成的 `decoded/running-right.png` 为历史来源，现已停用；当前构建只从 `running-left` 最终帧派生右侧，不会再次读取该右侧原图。
+
 需要带 Pillow、NumPy 的 Python，以及已安装的 `hatch-pet` 技能。以下命令从仓库根目录运行，构建到临时目录，不覆盖安装文件：
 
 ```bash
@@ -63,6 +68,10 @@ python3 tools/repair_tsumugi.py \
   --replacement-frames "$PET_BUILD_DIR/frames" --output-dir "$PET_BUILD_DIR/final"
 python3 "$HOME/.codex/skills/hatch-pet/scripts/validate_atlas.py" \
   "$PET_BUILD_DIR/final/spritesheet.webp" --require-v2 --chroma-key '#FF00FF'
+python3 tools/review_tsumugi.py \
+  --before pets/tsumugi-wenders/previews/before-2026-09-18.webp \
+  --after "$PET_BUILD_DIR/final/spritesheet.webp" \
+  --output-dir "$PET_BUILD_DIR/previews" --require-run-symmetry
 ```
 
 `tools/review_tsumugi.py` 可以重新生成前后对照动画与脚部位移报告。构建过程对每一行动作使用共同缩放比例，保留真实的屈膝高度变化；透明背景清理在最终缩放后完成，避免重采样再次带入背景色。

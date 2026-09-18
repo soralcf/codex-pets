@@ -72,5 +72,148 @@
       "after_loop_snap_px": 0.31188118811881793
     }
   },
-  "look_geometry_and_alpha_unchanged": true
+  "look_geometry_and_alpha_unchanged": true,
+  "directional_symmetry": {
+    "ok": true,
+    "canonical_state": "running-left",
+    "frame_order_preserved": true,
+    "frames": [
+      {
+        "frame": 0,
+        "different_rgba_pixels": 0,
+        "left_bounds": [
+          44,
+          9,
+          157,
+          201
+        ],
+        "right_bounds": [
+          35,
+          9,
+          148,
+          201
+        ],
+        "height_difference_px": 0
+      },
+      {
+        "frame": 1,
+        "different_rgba_pixels": 0,
+        "left_bounds": [
+          45,
+          8,
+          158,
+          200
+        ],
+        "right_bounds": [
+          34,
+          8,
+          147,
+          200
+        ],
+        "height_difference_px": 0
+      },
+      {
+        "frame": 2,
+        "different_rgba_pixels": 0,
+        "left_bounds": [
+          42,
+          9,
+          157,
+          201
+        ],
+        "right_bounds": [
+          35,
+          9,
+          150,
+          201
+        ],
+        "height_difference_px": 0
+      },
+      {
+        "frame": 3,
+        "different_rgba_pixels": 0,
+        "left_bounds": [
+          45,
+          10,
+          157,
+          202
+        ],
+        "right_bounds": [
+          35,
+          10,
+          147,
+          202
+        ],
+        "height_difference_px": 0
+      },
+      {
+        "frame": 4,
+        "different_rgba_pixels": 0,
+        "left_bounds": [
+          38,
+          9,
+          158,
+          201
+        ],
+        "right_bounds": [
+          34,
+          9,
+          154,
+          201
+        ],
+        "height_difference_px": 0
+      },
+      {
+        "frame": 5,
+        "different_rgba_pixels": 0,
+        "left_bounds": [
+          43,
+          8,
+          159,
+          200
+        ],
+        "right_bounds": [
+          33,
+          8,
+          149,
+          200
+        ],
+        "height_difference_px": 0
+      },
+      {
+        "frame": 6,
+        "different_rgba_pixels": 0,
+        "left_bounds": [
+          45,
+          9,
+          157,
+          201
+        ],
+        "right_bounds": [
+          35,
+          9,
+          147,
+          201
+        ],
+        "height_difference_px": 0
+      },
+      {
+        "frame": 7,
+        "different_rgba_pixels": 0,
+        "left_bounds": [
+          44,
+          10,
+          158,
+          202
+        ],
+        "right_bounds": [
+          34,
+          10,
+          148,
+          202
+        ],
+        "height_difference_px": 0
+      }
+    ]
+  }
 }

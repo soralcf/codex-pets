@@ -42,6 +42,7 @@ def main():
     p.add_argument("--before", type=Path, required=True)
     p.add_argument("--after", type=Path, required=True)
     p.add_argument("--output-dir", type=Path, required=True)
+    p.add_argument("--require-run-symmetry", action="store_true")
     args = p.parse_args()
     old = Image.open(args.before).convert("RGBA")
     new = Image.open(args.after).convert("RGBA")
@@ -72,6 +73,35 @@ def main():
         if not same_alpha:
             raise ValueError(f"Preserved look row {row} changed shape/registration")
     report["look_geometry_and_alpha_unchanged"] = True
+    symmetry = []
+    paired_frames = []
+    contact = Image.new("RGB", (8 * 192, 2 * 240), "#252a33")
+    draw = ImageDraw.Draw(contact)
+    for col in range(8):
+        left = cell(new, 2, col)
+        right = cell(new, 1, col)
+        expected = left.transpose(Image.Transpose.FLIP_LEFT_RIGHT)
+        different = int(np.any(np.asarray(right) != np.asarray(expected), axis=2).sum())
+        lb, rb = left.getbbox(), right.getbbox()
+        symmetry.append({"frame": col, "different_rgba_pixels": different,
+                         "left_bounds": lb, "right_bounds": rb,
+                         "height_difference_px": (rb[3] - rb[1]) - (lb[3] - lb[1])})
+        pair = Image.new("RGB", (408, 252), "#252a33")
+        pd = ImageDraw.Draw(pair)
+        for row, (sprite, label, x) in enumerate(((left, "LEFT", 6), (right, "RIGHT", 210))):
+            pd.text((x, 7), f"{label} / {col + 1}", fill="white")
+            pair.paste(sprite, (x, 30), sprite)
+            draw.text((col * 192 + 5, row * 240 + 5), f"{label} / {col + 1}", fill="white")
+            contact.paste(sprite, (col * 192, row * 240 + 25), sprite)
+        paired_frames.append(pair)
+    symmetric = all(f["different_rgba_pixels"] == 0 for f in symmetry)
+    report["directional_symmetry"] = {"ok": symmetric, "canonical_state": "running-left",
+                                       "frame_order_preserved": True, "frames": symmetry}
+    if args.require_run_symmetry and not symmetric:
+        raise ValueError("Directional running rows are not exact per-frame mirrors")
+    contact.save(args.output_dir / "running-symmetry.png")
+    paired_frames[0].save(args.output_dir / "running-symmetry.webp", save_all=True,
+                          append_images=paired_frames[1:], duration=DURATIONS[1], loop=0, lossless=True)
     (args.output_dir / "motion-review.json").write_text(json.dumps(report, indent=2) + "\n")
     print(json.dumps({k: {s: round(v, 2) for s, v in data.items() if s.endswith("_px")} for k, data in report["rows"].items()}))
 

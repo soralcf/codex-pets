@@ -1,0 +1,20 @@
+{
+  "ok": true,
+  "before_sha256": "3aedeccdab8ebd766f743b822fa976d4a0c5b30e300251a9c7493898c3555d13",
+  "after_sha256": "ba5096b3ff12ecbd23b676538e0a235be5d6e67de3b36b7093d2b683b0a36b36",
+  "changed_rows": [
+    1
+  ],
+  "unchanged_rows": [
+    0,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ]
+}

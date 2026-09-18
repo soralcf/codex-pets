@@ -1,6 +1,6 @@
 {
   "visual_qa": "pass",
-  "stage": "final exported temporal sequence review",
+  "stage": "Targeted left/right symmetry repair; unchanged rows retain prior visual review",
   "motion_playback_status": "complete via frame-decoded timed sequence and repeat/state-transition inspection; no continuous live playback claim",
   "scope": [
     "idle",
@@ -36,18 +36,16 @@
       "row": 1,
       "state": "running-right",
       "verdict": "pass",
-      "reason": "All eight poses face screen-right with hair trailing left, alternating extended/compressed/bent-knee leg silhouettes and active arm motion. Identity and apparent head scale remain cohesive; no whole-sprite rotation, clipping, or large per-frame scaling pop is visible.",
+      "reason": "Exact per-frame horizontal mirror of user-selected running-left; scale, details, RGBA silhouette and frame order match. Independent targeted QA passed.",
       "warnings": [
-        "Stride rhythm remains stylized and uneven: extended/compressed pair repeats early in the cycle, then bent/crossing poses follow. Accept as a limited eight-frame running cycle, not a rigorously alternating biomechanical gait.",
-        "Last-frame dwell is 220 ms versus 120 ms for others, so a cadence accent remains by app design."
+        "Frames 0 and 7 are similar, and several recovery poses recur, so the loop has an uneven cadence and a noticeable settle at its end. Accepted as stylized limited-frame movement."
       ],
       "motion_verdict": "pass_with_warnings",
       "motion_reasons": [
-        "Eight ordered poses face right throughout; active arms, bent knees and changing leg extension remain readable. No wrong-facing frame, major size jump, or silhouette clipping is visible in the exported sequence or repeat boundary."
+        "Faces right with hair trailing left; mirrors the accepted left gait in the same temporal order. See symmetry-visual-qa.json."
       ],
       "motion_warnings": [
-        "Stride rhythm remains stylized and uneven: extended/compressed pair repeats early in the cycle, then bent/crossing poses follow. Accept as a limited eight-frame running cycle, not a rigorously alternating biomechanical gait.",
-        "Last-frame dwell is 220 ms versus 120 ms for others, so a cadence accent remains by app design."
+        "Frames 0 and 7 are similar, and several recovery poses recur, so the loop has an uneven cadence and a noticeable settle at its end. Accepted as stylized limited-frame movement."
       ]
     },
     {
@@ -192,7 +190,7 @@
           220
         ],
         "cycle_duration_ms": 1060,
-        "sha256": "397a39fdda38cbdd212dddb49564af9f8f8cf1106644094671b3398520bcf48c"
+        "sha256": "c52ae5240fe084974e57ce9a46785770ec3dc5f75e53d685bd92fb9f755c8329"
       },
       "running-left": {
         "frame_count": 8,
@@ -258,9 +256,13 @@
     },
     "app_sequence_explanation": "Each action export contains three complete action cycles followed by six idle frames."
   },
-  "spritesheet_sha256": "3aedeccdab8ebd766f743b822fa976d4a0c5b30e300251a9c7493898c3555d13",
+  "spritesheet_sha256": "ba5096b3ff12ecbd23b676538e0a235be5d6e67de3b36b7093d2b683b0a36b36",
   "browser_checks": {
     "verified": "parent inspected jump start/apex, failed frames0/1, frame-step controls and image loading in local browser",
-    "installed_app_live_playback_observed": false
-  }
+    "installed_app_live_playback_observed": false,
+    "scope": "Historical browser controls and unchanged jump/failed inspection before symmetry repair"
+  },
+  "prior_review_sha256": "3aedeccdab8ebd766f743b822fa976d4a0c5b30e300251a9c7493898c3555d13",
+  "symmetry_visual_qa": "symmetry-visual-qa.json",
+  "unchanged_rows_evidence": "run-symmetry-change-scope.json"
 }

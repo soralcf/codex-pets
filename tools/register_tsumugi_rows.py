@@ -47,9 +47,16 @@ def main():
     extract = load_script(args.skill_dir / "scripts/extract_strip_frames.py", "pet_extract")
     despill = load_script(args.skill_dir / "scripts/despill_chroma_edges.py", "pet_despill")
     states = args.states.split(",")
+    # User-selected canonical gait: left-facing art matches the character best.
+    # Mirror finalized cells, never the whole strip (which reverses frame order).
+    requested_states = states[:]
+    if "running-right" in states:
+        states.remove("running-right")
+        if "running-left" not in states:
+            states.append("running-left")
     counts = {"idle": 6, "running-right": 8, "running-left": 8, "jumping": 5, "failed": 8}
     report = {"method": "complete-pose-components/shared-row-scale", "chroma_key": "#FF00FF", "rows": {}}
-    contact = Image.new("RGB", (1536, 240 * len(states)), "#20242b")
+    contact = Image.new("RGB", (1536, 240 * len(requested_states)), "#20242b")
     draw = ImageDraw.Draw(contact)
     for index, state in enumerate(states):
         path = args.run_dir / "decoded" / f"{state}.png"
@@ -81,7 +88,6 @@ def main():
         out = args.run_dir / "frames" / state
         out.mkdir(parents=True, exist_ok=True)
         row_report = {"source": str(path), "pose_bounds": boxes, "scale": scale, "frames": []}
-        draw.text((5, index * 240 + 5), state, fill="white")
         for col, (pose, anchor) in enumerate(zip(poses, anchors)):
             resized = pose.resize((round(pose.width * scale), round(pose.height * scale)), Image.Resampling.LANCZOS)
             left = round(target_x - anchor * scale)
@@ -104,14 +110,32 @@ def main():
             data[data[:, :, 3] == 0, :3] = 0
             cell = Image.fromarray(data)
             cell.save(out / f"{col:02}.png")
-            contact.paste(cell, (col * 192, index * 240 + 25), cell)
             row_report["frames"].append({"column": col, "left": left, "top": top,
                                           "size": resized.size, "despill": color_report})
         report["rows"][state] = row_report
+    if "running-right" in requested_states:
+        out = args.run_dir / "frames" / "running-right"
+        out.mkdir(parents=True, exist_ok=True)
+        for col in range(8):
+            with Image.open(args.run_dir / "frames" / "running-left" / f"{col:02}.png") as cell:
+                cell.transpose(Image.Transpose.FLIP_LEFT_RIGHT).save(out / f"{col:02}.png")
+        report["rows"]["running-right"] = {
+            "method": "horizontal-mirror-of-final-cells",
+            "source_state": "running-left",
+            "frame_mapping": list(range(8)),
+            "decision": "User chose left-facing gait as canonical; mirror details and accessories with each cell.",
+            "resampling": False,
+        }
+    for index, state in enumerate(requested_states):
+        draw.text((5, index * 240 + 5), state, fill="white")
+        for col in range(counts[state]):
+            with Image.open(args.run_dir / "frames" / state / f"{col:02}.png") as cell:
+                contact.paste(cell, (col * 192, index * 240 + 25), cell)
     qa = args.run_dir / "qa"
+    qa.mkdir(parents=True, exist_ok=True)
     (qa / "row-registration.json").write_text(json.dumps(report, indent=2) + "\n")
     contact.save(qa / "registered-new-rows.png")
-    print(json.dumps({"rows": states, "contact": str(qa / "registered-new-rows.png")}))
+    print(json.dumps({"rows": requested_states, "contact": str(qa / "registered-new-rows.png")}))
 
 
 if __name__ == "__main__":
